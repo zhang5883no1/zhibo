@@ -1,0 +1,124 @@
+﻿@charset "utf-8";
+/* CSS Document */
+body,ul,li,h1,h2,h3,h4,h5,h6,dl,dd,p,form{ margin: 0; padding:0;}
+a,a:hover{text-decoration: none;-webkit-tap-highlight-color:rgba(0, 0, 0, 0)}
+li{ list-style:none;}
+img{border: 0px;}
+em,i{font-style: normal}
+table{ border-collapse: collapse}
+input,button,select,textarea{outline: none; padding: 0rem; margin: 0rem}
+input,textarea{ border: 0; background:none;}
+textarea{ resize: none}
+input,select,button{ -webkit-appearance: none;-webkit-tap-highlight-color: transparent; -webkit-border-radius: 0rem; -moz-border-radius: 0rem;border-radius: 0rem}
+input[type="submit"],input[type="reset"],input[type="button"],input[type="text"],select,button{ -webkit-appearance: none;-webkit-tap-highlight-color: transparent; -webkit-border-radius: 0rem; border-radius: 0rem; -moz-border-radius: 0rem}
+html,body{ height: 100%; width: 100%; font-family: "微软雅黑"}
+
+.bg{ position: relative;top: 0;right: 0;left: 0; height: 100%;width: 100%; background: url(../images/bg1.jpg) #2491D6 no-repeat; background-size: cover}
+#main{position: absolute;overflow: hidden;z-index: 1; left: 0; right: 0;}
+/*video*/
+.video{z-index: 1; position: absolute;top: 0;left: 0; right: 0; overflow: hidden;width:100%;height:40%}
+.video embed{ height: 100%;  width: 100%}
+/*btn*/
+.btnBox{ width: 100%; position: fixed; top:40%; left: 0; height: 8%; background-color: rgba(0,0,0,.5); text-align: center; z-index: 999}
+.btnBox table{ width: 94%; height: 100%;margin-left: 3%}
+.btnBox td{ font-size: 0; padding: 0 1%}
+.btnBox td.reg{ width: 31%}
+.btnBox td.log{ width: 23%}
+.btnBox td.content{ width: 31%}
+.btnBox a{vertical-align:middle}
+.btnBox a img { max-width: 100%; display: inline-block;}
+/*main*/
+#topic{position: absolute;top: 48%;bottom: 0;left: 0;right: auto; height: 52%; overflow: hidden; width: 100%}
+.topicMain{ position: relative;overflow: hidden;background: rgba(24,34,45,.1)}
+.topiccontent {float: left; width: 100%;margin-top: 0.2rem}
+.mCustomScrollBox{position:relative; height:100%; overflow:hidden; max-width:100%;}
+.mCSB_container{position: relative}
+.talk{position: relative; overflow: hidden; margin:0 3% 0.2rem}
+.talk span{ display: block}
+.talk .time{ background: rgba(26,36,47,.4);border-radius: 0.2rem;color: #fff;float: left;height: 1.4rem;line-height: 1.4rem;text-align: center;width: 2.5rem; word-break: break-all;word-wrap: break-word; font-size:12px;margin: 0.3rem 0.2rem 0.2rem 0}
+.talk span{ float: left}
+.talk span>img { float: left;margin-right: 0.2rem; max-height: 1.8rem; margin-top: 0.1rem; margin-bottom: 0.1rem}
+.talk span>div{float: left}
+.person_name{float:left}
+.person_name .name{float: left; background:#ff8800;border-radius: 3px;color: #fff; height: 1.8rem; line-height: 1.9rem; text-align: center; padding:0 0.5rem; margin: 0.1rem 0.4rem 0.1rem 0; font-size: 0.8rem}
+.talk_hua{float: left; margin-top: 0.2rem}
+.talk_hua p{ float: left;  background: #fff; padding: 0.4rem 0.5rem 0.3rem; border-radius: 3px; line-height: 1.2rem; color: #2f2f2f; font-size: 12px}
+.talk_hua p img{margin-right: 0.1rem;width: auto; cursor: pointer;}
+.xun{ padding-bottom: 0.2rem; padding-top: 0.2rem}
+.talk_hua1{ margin-top: 0.2rem}
+.talk_hua1 p{ background-color: #fff; color: #1c2733; font-size: 13px; font-weight: bold; padding: 0.4rem 0.5rem 0.3rem; margin-right: 0.2rem; line-height: 1.2rem; box-shadow: 2px 2px 2px #000}
+.talk_hua2{ margin-top: 0.2rem}
+.talk_hua2 p{ background-color: #fff; color: #ff001d; font-size: 13px; font-weight: bold; padding: 0.4rem 0.5rem 0.3rem; margin-right: 0.2rem; line-height: 1.2rem; box-shadow: 2px 2px 2px #000}
+.xun span .person_name a{ background-color: #921f01}
+.talk .at{ float: left; color:#130e0f;font-style:normal;margin:0.1rem 0.4rem 0.1rem 0; background-color: #fff; padding:0 0.5rem; border-radius: 3px;height: 1.8rem; line-height: 1.9rem; font-size: 12px}
+.talk .speak{ float: left; color:#130e0f;font-style:normal;margin:0.2rem 0.4rem 0 0; padding: 0; height: 1.8rem; line-height: 1.9rem; font-size: 12px}
+.talk_hua p img{ margin-right: 0.2rem; max-width: 100%}
+.tbox{position: absolute;display: none; padding: 0.4rem; z-index: 999}
+.tinner{ padding: 0.4rem;  border-radius: 5px; background:url(../images/preload.gif) #fff no-repeat 50% 50%;}
+.tmask{ position: absolute; display: none;top: 0px;left: 0px; height: 100%;width: 100%;  background: #000; z-index: 999}
+.tclose{position: absolute; top: -0.3rem; right: 0.2rem; width: 1.5rem; height: 1.5rem; cursor: pointer; background: url(../images/sqclose.png) no-repeat; background-size: 100%}
+.tcontent img{ max-width: 100%}
+/*topicinput*/
+#topicinput{ width: 100%;  height: 3rem; left: 0; bottom: 0px;position: absolute;z-index: 10; background-color: #f4f4f4; border-top: #abb4ba 0.1rem solid}
+.input_area{ width: 96%; margin: 0 auto; height: 2.5rem; position: relative; padding-top: 0.5rem}
+.tool_bar{position: relative;margin-right: 0.4rem; float: left;}
+.bar{ width: 2rem; height: auto; display: block; position: relative; }
+.bar_2 img{ width: 100%}
+.inputBox{ padding: 0 4rem 0 0; }
+.input_area #sendMsgInput{ font-size: 0.8rem; margin-right:0.4rem;outline: none; height: 2rem;background-color: #fff; border: #939393 1px solid;color: #1d1d1c; border-radius: 3px; resize:none; font-family: "微软雅黑"; word-break:break-all;overflow-y:auto}
+#face { background: #fff;border: rgb(146,146,142) 1px solid;border-radius: 3px;padding: 5px;width: 252px;height: 180px; position: fixed;box-shadow: 1px 1px 3px #000; z-index: 20;}
+#face dd { float: left; width: 28px; height: 28px; overflow: hidden;cursor: pointer;}
+#face ul,#caitiao ul { height: 22px; line-height: 22px;background: #e4e4e3 url(../images/g_bg.jpg) left top repeat-x; position: absolute; left: 0; bottom: 0;width: 100%;}
+#face ul li,#caitiao ul li {float: left;padding: 0 5px; border-left: #e4e4e3 1px solid; border-right: #e4e4e3 1px solid;}
+#face ul li:hover,#face ul .f_cur,#caitiao ul li:hover,#caitiao ul .f_cur {background: #fff; border-color: #d9d9d8; cursor: pointer;}
+.sub_btn { background: #ff8a00; width: 4rem; height: 2rem; line-height: 2rem; display: block; position: absolute;right: 0;top: 0.5rem; font-size: 1.1rem; color: #fff; text-align: center; border-radius: 5px}
+
+/*pop*/
+.pop{ width: 100%; height: 100%; position: absolute; top: 0; left: 0;background: rgba(0,0,0,.5);background: url(../images/popBg.png)\9; z-index: 99; display: none}
+/*register*/
+.register{ width: 100%; height: 100%; position:absolute; top:0; left: 0;  background-color: #f5f5f5; z-index: 999;opacity: 0}
+.register h1,.login h1{ height: 3rem; line-height: 3rem; background-color: #d8d8d8; font-size: 1.1rem; padding: 0 0.6rem; position: relative;}
+.register h1 span,.login h1 span{ position: absolute; font-size: 0.75rem; color: #838383; margin-left: 0.4rem; top:0.9rem; display: inline-block; height: 1.2rem; line-height: 1.2rem; padding-left: 0.4rem; font-weight: 400}
+.register h1 span i,.login h1 span i{ position: absolute; left: 0; top: 0; height: 100%; width: 2px; background-color: #838383}
+.register form,.login form{ width: 82%;  margin: 1rem auto 0}
+.register div{ margin-bottom: 0.2rem; position: relative;}
+.register p{ width: 90%; height: 2.4rem; border: #b5b5b5 1px solid; padding-left: 3%; overflow: hidden}
+.register p label,.login p label{ float: left; width: 20%; margin-right: 1%; background-color: #f00; height: 2.4rem; margin-top: 0.2rem; background:url(../images/form.png); background-repeat: no-repeat;}
+.register p input,.login p input{ height: 2.4rem; border: 0; background:transparent; width: 79%; float: left; font-family: "微软雅黑"; outline: none; color: #000; font-size: 0.9rem}
+.register p input:required:invalid,.login p input:required:invalid{box-shadow: none; }
+.register p label.lab1{ background-position: 0 0}
+.register p label.lab2,.login p label.lab2{ background-position: 0 -34px}
+.register p label.lab3,.login p label.lab3{ background-position: 0 -68px}
+.register p label.lab4{ background-position: 0 -102px}
+.register p label.lab5{ background-position: 0 -136px}
+.register p label.lab6{ background-position: 0 -170px}
+.register p label.lab7{ background-position: 0 -204px}
+.register div span{ position:absolute; right: 0; color: #f00; font-size: 22px; height: 30px; top: 50%; margin-top: -15px}
+.register p input:-moz-placeholder,.login p input:-moz-placeholder{color: #676767}
+.register p input::-moz-placeholder,.login p input::-moz-placeholder{ color: #676767}
+.register p input:-ms-input-placeholder,.login p input:-ms-input-placeholder{color: #676767}
+.register p input::-webkit-input-placeholder,.login p input::-webkit-input-placeholder{color: #676767}
+/* .huakuai{  position: relative;width: 93%;border: #b5b5b5 0.1rem solid; height: 2.4rem;line-height: 2.4rem;text-align: center;color: #676767; margin-bottom: 0.2rem; overflow: hidden;}
+.huakuai .handler{position: absolute;top: 0px;left: 0px;width: 22%; height: 2.4rem; background-color: #dadada; cursor: move;}
+.handler_bg{ background: #fff url(../images/right.png) no-repeat center;}
+.handler_ok_bg{ background: #fff url(../images/true.png) no-repeat center;}
+.huakuai .drag_bg{ background-color: #7ac23c;height: 2.4rem;width: 0px;}
+.huakuai .drag_text{ position: absolute; top: 0px; width: 100%; font-size: 14px; -moz-user-select: none; -webkit-user-select: none; user-select: none; -o-user-select:none; -ms-user-select:none} */
+.register .mit{ background-color: #00a2d2; height: 2.4rem; line-height: 2.4rem; width: 93%; border: #007b9f 1px solid; font-weight: bold; font-size: 1.1rem; color: #fff; font-family:"微软雅黑"; cursor: pointer;}
+.register .close,.login .close{ position: absolute; right: 0.5rem; top: 1.1rem; background:url(../images/close.png) no-repeat; background-size: 100%; width: 0.8rem; height: 0.8rem; z-index: 999}
+/*login*/
+.login{ width: 100%; height: 100%; position:absolute; top:0; left: 0; background:#f5f5f5; z-index: 999; display: none}
+.login p{ margin-bottom: 0.2rem; overflow: hidden; width: 97%; height: 2.4rem; border: #b5b5b5 1px solid; padding-left: 3%; overflow: hidden}
+.login .mit{ background-color: #00a2d2; height: 2.4rem; line-height: 2.4rem; width: 100%; border: #007b9f 1px solid; font-weight: bold; font-size: 1.1rem; color: #fff; font-family:"微软雅黑"; cursor: pointer; margin-top: 0.2rem}
+.login span{ color: #838383; font-size: 0.8rem; display: block; text-align: center; height: 2.6rem; line-height: 2.6rem}
+.login span a{  color: #303030;text-decoration: underline; font-weight: bold; padding-left: 0.2rem}
+.login span a.ui-link{ color: #303030; font-weight: bold}
+.ui-body-c .login .ui-link:visited{ color: #303030}
+.ui-body-c .login .ui-link:hover{ color: #303030}
+/*jquery mobile*/
+.ui-mobile [data-role=page], .ui-mobile [data-role=dialog], .ui-page{ height: 100%; position: relative; width: 100%}
+.ui-body-c .ui-link{ font-weight: 400}
+.ui-body-c, .ui-overlay-c {border: 1px solid #aaa;color: #333;text-shadow: 0 1px 0 #fff;background:#fff;background-image:none}
+.ui-body-c, .ui-body-c input, .ui-body-c select, .ui-body-c textarea, .ui-body-c button {font-family: "微软雅黑"}
+.ui-body-c, .ui-overlay-c { border: none; text-shadow: none}
+.ui-loader{ display: none}

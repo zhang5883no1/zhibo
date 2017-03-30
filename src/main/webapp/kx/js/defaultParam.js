@@ -1,0 +1,14 @@
+var sessionId = null;
+var time = null;
+var customer=null;
+var _getInfo=null;
+var startPage=0;
+var _last_info_id=0;
+var userName = "";
+var level = "";
+var alertImg=null;
+var hideScrolInfo=null;
+var subInfoFlag=true;
+var subInfoThread=null;
+var subInfoTime=0;
+var yanzheng="";

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+
+	<display-name>Simple web application</display-name>
+	<filter>
+		<filter-name>CharacterEncoding</filter-name>
+		<filter-class>com.xidu.util.CharacterEncoding</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>CharacterEncoding</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<servlet>
+		<servlet-name>Register</servlet-name>
+		<servlet-class>com.xidu.controller.RegisterUserController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Register</servlet-name>
+		<url-pattern>/controller/Register</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>GetCode</servlet-name>
+		<servlet-class>com.xidu.controller.RegisterCodeController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GetCode</servlet-name>
+		<url-pattern>/controller/GetCode</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	    <servlet-name>QuartzInitializer</servlet-name>
+	    <servlet-class>
+	      org.quartz.ee.servlet.QuartzInitializerServlet
+	    </servlet-class>
+	    <init-param>
+	      <param-name>config-file</param-name>
+	      <param-value>/quartz.properties</param-value>
+	    </init-param>
+	    <init-param>
+	      <param-name>shutdown-on-unload</param-name>
+	      <param-value>true</param-value>
+	    </init-param>
+	    <load-on-startup>2</load-on-startup>
+	 </servlet>
+	
+	
+<!-- xwg 2016.5.13 -->
+	<servlet>
+	    <servlet-name>ChatsController</servlet-name>
+	    <servlet-class>com.xidu.controller.ChatsController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>ChatsController</servlet-name>
+	    <url-pattern>/controller/ChatsController</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+	    <servlet-name>CustomerRegisterController</servlet-name>
+	    <servlet-class>com.xidu.controller.CustomerRegisterController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>CustomerRegisterController</servlet-name>
+	    <url-pattern>/controller/CustomerRegisterController</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+	    <servlet-name>InitController</servlet-name>
+	    <servlet-class>com.xidu.controller.InitController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>InitController</servlet-name>
+	    <url-pattern>/controller/InitController</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+	    <servlet-name>LoginController</servlet-name>
+	    <servlet-class>com.xidu.controller.LoginController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>LoginController</servlet-name>
+	    <url-pattern>/controller/LoginController</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+	    <servlet-name>SendChatsController</servlet-name>
+	    <servlet-class>com.xidu.controller.SendChatsController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>SendChatsController</servlet-name>
+	    <url-pattern>/controller/SendChatsController</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+	    <servlet-name>TouristRegisterController</servlet-name>
+	    <servlet-class>com.xidu.controller.TouristRegisterController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>TouristRegisterController</servlet-name>
+	    <url-pattern>/controller/TouristRegisterController</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	    <servlet-name>code.jpg</servlet-name>
+	    <servlet-class>com.xidu.yzm.CodeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>code.jpg</servlet-name>
+	    <url-pattern>/controller/code.jpg</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+  	<servlet-name>codeService</servlet-name>
+  	<servlet-class>com.xidu.yzm.CodeService</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>codeService</servlet-name>
+  	<url-pattern>/controller/codeService</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+		<servlet-name>uploadServlet2</servlet-name>
+		<servlet-class>com.xidu.controller.ImageUpload</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>uploadServlet2</servlet-name>
+		<url-pattern>/controller/uploadServlet2</url-pattern>
+	</servlet-mapping>
+
+   <servlet>
+		<servlet-name>updateNickNameAndPwdController</servlet-name>
+		<servlet-class>com.xidu.controller.UpdateNickNameAndPwdController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>updateNickNameAndPwdController</servlet-name>
+		<url-pattern>/controller/updateNickNameAndPwdController</url-pattern>
+	</servlet-mapping>
+
+<!-- zc 0516 update normal chats service -->
+	<servlet>
+	    <servlet-name>putChats</servlet-name>
+	    <servlet-class>com.xidu.controller.NormalChatsController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>putChats</servlet-name>
+	    <url-pattern>/controller/putChats</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	    <servlet-name>validInfo</servlet-name>
+	    <servlet-class>com.xidu.controller.ValidInfoController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>validInfo</servlet-name>
+	    <url-pattern>/controller/validInfo</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	    <servlet-name>updateInfo</servlet-name>
+	    <servlet-class>com.xidu.controller.UpdateController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>updateInfo</servlet-name>
+	    <url-pattern>/refresh/update</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	    <servlet-name>getInfo</servlet-name>
+	    <servlet-class>com.xidu.controller.SessionController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>getInfo</servlet-name>
+	    <url-pattern>/controller/getInfo</url-pattern>
+	</servlet-mapping>
+	
+	
+	<!-- xwg 2016-07-07 -->
+	<servlet>
+	    <servlet-name>UserInfoUpdateController</servlet-name>
+	    <servlet-class>com.xidu.controller.UserInfoUpdateController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>UserInfoUpdateController</servlet-name>
+	    <url-pattern>/controller/UserInfoUpdateController</url-pattern>
+	</servlet-mapping>
+	
+	
+	<!-- xwg 2016-07-13 -->
+	<servlet>
+	    <servlet-name>SumVideoTimeController</servlet-name>
+	    <servlet-class>com.xidu.controller.SumVideoTimeController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>SumVideoTimeController</servlet-name>
+	    <url-pattern>/controller/SumVideoTimeController</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	    <servlet-name>ConsoleController</servlet-name>
+	    <servlet-class>com.xidu.controller.ConsoleController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>ConsoleController</servlet-name>
+	    <url-pattern>/controller/CcController</url-pattern>
+	</servlet-mapping>
+	<listener>  
+        <listener-class>com.xidu.init.SessionListener</listener-class>  
+    </listener>
+	  
+    
+    <session-config>    
+		<session-timeout>1</session-timeout>      
+	</session-config>  
+</web-app>
+
+
